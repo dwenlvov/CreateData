@@ -5,7 +5,7 @@ import numpy as np
 import string as st
 
 
-class CreateData:
+class EasyData:
     def __init__(self):
         self.EQUAL_MAX = 1
         self.SIZE = 'size'

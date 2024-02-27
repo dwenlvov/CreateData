@@ -7,10 +7,15 @@ When you need to come up with a test dataset quickly.
 ```python
 pip install CreateData
 ```
-
+and you need to install:
+```python
+pip install pandas numpy python-dateutil
+```
 ## Fast and easy data generation N-row
 ```python
-CreateData().gnrt({'size':1000}, easy=True)
+import CreateData.create_data as cd
+
+cd.EasyData().gnrt({'size':1000}, easy=True)
 ```  
   
 **Output example:**
@@ -25,7 +30,7 @@ CreateData().gnrt({'size':1000}, easy=True)
 
 ## Need more columns and their customizations?
 ```python
-params = CreateData().get_params()
+params = cd.EasyData().get_params()
 ```
 Output:  
 
@@ -42,5 +47,5 @@ min_date <- max_date - 1 year
 
 ## Edit the dictionary and pass it to the function
 ```python
-CreateData().gnrt(params)
+cd.EasyData().gnrt(params)
 ```
