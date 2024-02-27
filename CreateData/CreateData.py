@@ -85,10 +85,8 @@ class CreateData:
 
         return [''.join(np.random.choice(list(letters), np.random.randint(min_str, max_str + self.EQUAL_MAX))) for _ in range(self.size)]
 
-    def gnrt(self, params:dict = None, easy:bool = False,) -> pd.DataFrame:
-        df_params = {}
-        
-        self.size = params[self.SIZE]    
+    def gnrt(self, params:dict = None, easy:bool = False) -> pd.DataFrame:
+        self.size = params[self.SIZE]
         df = pd.DataFrame()
         
         for func in self.functions.keys():
